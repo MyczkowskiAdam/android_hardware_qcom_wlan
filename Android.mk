@@ -1,5 +1,5 @@
 WLAN_PATH := $(call my-dir)
 
-ifeq ($(WLAN_PATH),$(call project-path-for,wlan))
+ifeq ($(TARGET_USES_CAF_WLAN),true)
 include $(call first-makefiles-under,$(WLAN_PATH))
 endif
